@@ -4,7 +4,7 @@
 ## Lists
 ## Stacks
 ## Queues
-[Binary Trees](##binary-search-trees)
+[Binary Trees](#binary-search-trees)
 ## Binary Search Trees
 ## Heaps
 ## Hashing
@@ -12,5 +12,18 @@
 ## Graphs
 
 
+<br>
+<br>
+v
+v
+<br>
+<br>
+v
+<br>
+<br>
+<br>
+v
+<br>
+<br>
 
-## Binary Search Trees
+## <a name="binary-search-trees"></a> Binary Search Trees
