@@ -37,4 +37,22 @@ public class StringUtils {
         return isUnique;
     }
 
+    /**
+    * Write code to reverse a C-Style String.
+    * (C-String means that “abcd” is represented as five characters, including the null character.)
+    */
+    public String reverseCString(String input){
+      if(input.charAt(input.length() - 1) != '\0') {
+        System.out.println("Please insert a C Style string!");
+        return null;
+      } else {
+        StringBuilder reversedString = new StringBuilder();
+        for(int i = input.length() - 2; i >= 0; i--) {
+          reversedString.append(input.charAt(i));
+        }
+        reversedString.append('\0');
+        return reversedString.toString();
+      }
+    }
+
 }
