@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c76a0433-4e4f-418b-9431-5167232f6945" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/strings/StringUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/strings/StringUtilsTestCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/strings/StringUtilsTestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/strings/StringUtilsTestCase.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="StringUtilsTestCase.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/strings/StringUtilsTestCase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -212,12 +211,20 @@
       <option name="presentableId" value="Default" />
       <updated>1536078853184</updated>
       <workItem from="1536078858246" duration="1032000" />
-      <workItem from="1536080021429" duration="3141000" />
+      <workItem from="1536080021429" duration="3234000" />
     </task>
+    <task id="LOCAL-00001" summary="implements basic operation on strings to determine uniqueness of characters">
+      <created>1536083337247</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1536083337247</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4173000" />
+    <option name="totallyTimeSpent" value="4266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -259,6 +266,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="implements basic operation on strings to determine uniqueness of characters" />
+    <option name="LAST_COMMIT_MESSAGE" value="implements basic operation on strings to determine uniqueness of characters" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -283,8 +294,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/strings/StringUtilsTestCase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>

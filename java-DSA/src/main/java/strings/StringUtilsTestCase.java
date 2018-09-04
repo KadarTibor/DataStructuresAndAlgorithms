@@ -1,7 +1,5 @@
 package strings;
 
-import java.sql.SQLOutput;
-
 public class StringUtilsTestCase {
 
     public static void main(String[] args) {
