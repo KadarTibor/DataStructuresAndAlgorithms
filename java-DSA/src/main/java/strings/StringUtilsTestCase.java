@@ -10,6 +10,13 @@ public class StringUtilsTestCase {
         testStringUniquenessWithoutExtraDS(stringUtils, "abcdef", "abcdeff");
 
         testReverseCString(stringUtils, "geza kek az eg\0");
+
+        testRemoveDuplicates(stringUtils);
+
+        testCheckAnagrams(stringUtils, "abcd", "acdb");
+        testCheckAnagrams(stringUtils, "dachshund", "beaglehun");
+
+        testReplaceStrings(stringUtils,"This is a string containing spaces");
     }
 
     private static void testStringUniquenessWithExtraDS(StringUtils stringUtils, String goodExample, String badExample) {
@@ -50,16 +57,53 @@ public class StringUtilsTestCase {
     }
 
     private static void testReverseCString(StringUtils stringUtils, String input) {
-      System.out.println("\nTesting the reverse C Style String utility");
-      String result = stringUtils.reverseCString(input);
+        System.out.println("\nTesting the reverse C Style String utility");
+        String result = stringUtils.reverseCString(input);
 
-      if(result == null) {
-        System.out.println("Bad input");
-      } else if(result.equals(new StringBuilder(input.substring(0, input.length() - 1)).reverse().toString() + '\0')){
-        System.out.println("The string was reversed successfully\n input: " + input + "\noutput: " + result);
-      } else {
-          System.out.println("Test failed");
-      }
+        if (result == null) {
+            System.out.println("Bad input");
+        } else if (result.equals(new StringBuilder(input.substring(0, input.length() - 1)).reverse().toString() + '\0')) {
+            System.out.println("The string was reversed successfully\n input: " + input + "\noutput: " + result);
+        } else {
+            System.out.println("Test failed");
+        }
+    }
+
+    private static void testRemoveDuplicates(StringUtils stringUtils) {
+        System.out.println("\nTest for continuous duplicate characters");
+        if (stringUtils.removeDuplicates("aaaa").equals("")) {
+            System.out.println("  As expected the result is an empty string");
+        }
+
+        System.out.println("\nTest for alternative duplicate characters");
+        if (stringUtils.removeDuplicates("abababab").equals("")) {
+            System.out.println("  As expected the result is an empty string");
+        }
+
+        System.out.println("\nTest for mixed string with duplicate characters");
+        if (stringUtils.removeDuplicates("abacada").equals("bcd")) {
+            System.out.println("  As expected the result is containing only atomic characters");
+        }
+
+        System.out.println("\nTest for string made of atomic characters");
+        if (stringUtils.removeDuplicates("abcd").equals("abcd")) {
+            System.out.println("  As expected the result is the same with the input");
+        }
+    }
+
+    private static void testCheckAnagrams(StringUtils stringUtils, String first, String second) {
+        System.out.println("\nTest the two string if they are anagrams: " + first + " " + second);
+        if (stringUtils.checkAnagrams(first, second)) {
+            System.out.println("    The two strings are anagrams");
+        } else {
+            System.out.println("    Thw two strings are not anagrams");
+        }
+    }
+
+    private static void testReplaceStrings(StringUtils stringUtils, String input) {
+        System.out.println("\nTest the replace strings with %20 method on string: " + input);
+
+        System.out.println("    The result is: " + stringUtils.replaceSpaces(input));
     }
 
 }
