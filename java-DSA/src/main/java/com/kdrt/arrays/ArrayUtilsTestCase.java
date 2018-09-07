@@ -1,4 +1,4 @@
-package arrays;
+package com.kdrt.arrays;
 
 public class ArrayUtilsTestCase {
 

@@ -1,4 +1,4 @@
-package binary.tree;
+package com.kdrt.tree;
 
 
 public class BinarySearchTree {

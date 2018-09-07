@@ -1,4 +1,4 @@
-package strings;
+package com.kdrt.strings;
 
 
 public class StringUtilsTestCase {
