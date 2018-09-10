@@ -1,4 +1,4 @@
-package com.kdrt.tree;
+package com.kdrt.trees;
 
 public class Node {
 
@@ -8,6 +8,12 @@ public class Node {
 
   public Node(int key) {
       this.key = key;
+  }
+
+  public Node(Node left, int key, Node right) {
+    this.left = left;
+    this.key = key;
+    this.right = right;
   }
 
   public Node getLeft() {
