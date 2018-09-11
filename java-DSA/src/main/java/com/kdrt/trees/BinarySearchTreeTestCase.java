@@ -9,10 +9,12 @@ public class BinarySearchTreeTestCase {
 
         bs.printInorder(root, 0);
 
-        if(bs.checkBalanced(root)) {
-            System.out.println("yes");
-        } else {
-            System.out.println("no");
-        }
+//        if(bs.checkBalanced(root)) {
+//            System.out.println("yes");
+//        } else {
+//            System.out.println("no");
+//        }
+
+        bs.printBinaryTree(root);
     }
 }

@@ -1,6 +1,8 @@
 package com.kdrt.trees;
 
 
+import com.kdrt.queues.Queue;
+
 public class BinarySearchTree {
 
     public BinarySearchTree() {
@@ -14,19 +16,40 @@ public class BinarySearchTree {
 
         //TODO implement BFS on the trees structure
 
-        if (root != null) {
-            if (root.getLeft() != null) {
-                printBinaryTree(root.getLeft());
+        Queue<Node> qu = new Queue<>();
+        qu.enqueue(root);
+
+        //we have 1 element as root for sure
+        int currentLevelCount = 1;
+        //we don't know how many elements are on the next level
+        int nextLevelCount = 0;;
+
+        while (!qu.isEmpty()) {
+            Node currentNode = qu.dequeue();
+            System.out.print(currentNode.getKey() + "  ");
+            if (currentNode.getRight() != null) {
+                qu.enqueue(currentNode.getRight());
+                nextLevelCount++;
+            }
+
+            if (currentNode.getLeft() != null) {
+                qu.enqueue(currentNode.getLeft());
+                nextLevelCount++;
+            }
+            currentLevelCount--;
+            if (currentLevelCount == 0) {
+                System.out.print("\n");
+                currentLevelCount = nextLevelCount;
+                nextLevelCount = 0;
             }
         }
-
     }
 
 
     public void printInorder(Node root, int level) {
-        if(root != null) {
+        if (root != null) {
             printInorder(root.getLeft(), level + 1);
-            for(int i = 0; i < level; i++) {
+            for (int i = 0; i < level; i++) {
                 System.out.print(" ");
             }
             System.out.print(root.getKey() + "\n");
@@ -44,26 +67,25 @@ public class BinarySearchTree {
     }
 
     private int minDepth(Node root) {
-        if(root != null) {
+        if (root != null) {
             return 1 + Math.min(minDepth(root.getLeft()), minDepth(root.getRight()));
         } else
             return 0;
     }
 
     private int maxDepth(Node root) {
-        if(root != null) {
+        if (root != null) {
             return 1 + Math.max(maxDepth(root.getLeft()), maxDepth(root.getRight()));
         } else
             return 0;
     }
 
     private int calculateHeight(Node root) {
-        if(root.getLeft() != null || root.getRight() != null)
+        if (root.getLeft() != null || root.getRight() != null)
             return calculateHeight(root.getLeft()) + calculateHeight(root.getRight()) + 1;
         else
             return 0;
     }
-
 
 
 }
