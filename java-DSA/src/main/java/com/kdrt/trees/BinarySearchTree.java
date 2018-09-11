@@ -14,8 +14,6 @@ public class BinarySearchTree {
      */
     public void printBinaryTree(Node root) {
 
-        //TODO implement BFS on the trees structure
-
         Queue<Node> qu = new Queue<>();
         qu.enqueue(root);
 
