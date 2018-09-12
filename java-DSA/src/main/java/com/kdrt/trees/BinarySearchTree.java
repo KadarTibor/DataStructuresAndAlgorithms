@@ -3,6 +3,8 @@ package com.kdrt.trees;
 
 import com.kdrt.queues.Queue;
 
+import java.util.Stack;
+
 public class BinarySearchTree {
 
     public BinarySearchTree() {
@@ -12,7 +14,7 @@ public class BinarySearchTree {
     /**
      * Pretty print the binary search trees
      */
-    public void printBinaryTree(Node root) {
+    public void printBinaryTreeBFS(Node root) {
 
         Queue<Node> qu = new Queue<>();
         qu.enqueue(root);
@@ -43,6 +45,26 @@ public class BinarySearchTree {
         }
     }
 
+    /**
+     * Print the order of nodes in a tree when parsed with DFS
+     * @param root
+     */
+    public void printBianryTreeDFS(Node root) {
+        Stack<Node> stack = new Stack<>();
+
+        while(!stack.isEmpty()) {
+
+            Node currentNode = stack.pop();
+            System.out.println(currentNode.getKey() + " - ");
+            if(currentNode.getLeft() != null) {
+                stack.push(currentNode.getLeft());
+            }
+
+            if(currentNode.getRight() != null) {
+                stack.push(currentNode.getRight());
+            }
+        }
+    }
 
     public void printInorder(Node root, int level) {
         if (root != null) {

@@ -39,4 +39,36 @@ public class ArraysImpl {
     /**
     *
     */
+    public int[] merge(int[] firstArray, int[] secondArray) {
+      int[] result = new int[firstArray.length + secondArray.length];
+
+      int indexOfSecondArray = 0;
+      int resultIndex = 0;
+      for(int i = 0; i < firstArray.length; i++) {
+          for(int j = indexOfSecondArray; j < secondArray.length; j++) {
+            if(firstArray[i] < secondArray[j]) {
+              result[resultIndex++] = firstArray[i];
+              indexOfSecondArray = j;
+              break;
+            } else {
+              result[resultIndex++] = secondArray[j];
+            }
+          }
+      }
+
+      for(int j = indexOfSecondArray; j < secondArray.length; j++) {
+          result[resultIndex++] = secondArray[j];
+      }
+
+      return result;
+    }
+
+    /**
+    */
+    public int[] merge(int[] firstArray, int indexInFirstArray, int[] secondArray, int indexInSecondArray) {
+
+    }
+
+
+
 }

@@ -15,6 +15,6 @@ public class BinarySearchTreeTestCase {
 //            System.out.println("no");
 //        }
 
-        bs.printBinaryTree(root);
+        bs.printBinaryTreeBFS(root);
     }
 }
